@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão e tratamento de dados</title>
+</head>
+
+<body>
+    <h1>olá, mundo</h1>
+
+    <script> 
+                //conversão de número
+        let n1 = Number.parseInt(window.prompt("forneça um número:")) // característica do promp é tratar string, então tem que converter. 
+        // let n2 = Number.parseFloat(window.prompt("forneça outro número:")) // p/ forçar um real
+
+        let n2 = Number(window.prompt("forneça outro número: ")) // genérico pega no JS
+        let nTotal = n1 + n2
+        // window.alert("a soma dos números é: " + nTotal)
+
+        // window.alert("a soma dos números é: " + nTotal.toString()) 
+        window.alert(`a soma dos números ${n1} e ${n2} é ${nTotal}`)
+    </script>
+</body>
+</html>

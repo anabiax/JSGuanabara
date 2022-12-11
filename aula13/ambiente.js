@@ -19,10 +19,10 @@ while (c <= 6) {
 }
 
 // estrutura de repetição com teste lógico no final
-
 let a = 1
 //faça enquanto
 do {
     console.log(`passe ${a}`)
     a++
 } while (a <= 10)
+

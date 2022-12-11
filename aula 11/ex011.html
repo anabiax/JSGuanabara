@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+</head>
+<body>
+    <h1>Exercício nacionalidade</h1>
+    <input type="search" name="busca" id="busca">
+    <input type="button" value="buscar" onclick="buscar()">
+    <div id="resultado"></div>
+
+    <script>
+        function buscar() {
+            let busca = window.document.getElementById('busca')
+            let resultado = window.document.getElementById('resultado')
+            let nacionalidade = busca.value
+            resultado.innerHTML = `Sua nacionalidade é <strong>${nacionalidade}</strong>.`
+
+            if(nacionalidade == 'brasileiro') {
+                resultado.innerHTML += `<p> vc é br, mané.</p>`
+            } else {
+                resultado.innerHTML += `<p>ñ é de casa.</p>`
+            }
+        }
+
+    </script>
+</body>
+</html>

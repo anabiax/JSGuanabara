@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando valores</title>
+</head>
+<body>
+    <h1>somando valores</h1>
+
+    <input type="number" name="txtn1" id="txtn1"> -
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="somar" onclick="somar()">
+    <input type="button" value="subtrair" onclick="subtrair()">
+    <input type="button" value="multiplicar" onclick="multiplicar()">
+
+    <div id="resultado">Resultado </div>
+
+    <script>
+        function somar() {
+            let tn1 = window.document.getElementById('txtn1')
+            let tn2 = window.document.querySelector('input#txtn2')
+            let resultado = window.document.getElementById('resultado')
+
+            // somar números e n concatenar
+            let valorN1 = Number(tn1.value)
+            let valorN2 = Number(tn2.value)
+            let soma = valorN1 + valorN2
+            resultado.innerHTML = `a soma entre ${valorN1} + ${valorN2} é igual a ${soma}.`
+        } 
+
+        function subtrair() {
+            let num1 = window.document.getElementById('txtn1')
+            let num2 = window.document.querySelector('input#txtn2')
+            let resultado = window.document.getElementById('resultado')
+
+            let valorNum1 = Number(num1.value)
+            let valorNum2 = Number(num2.value)
+            let subtrair = valorNum1 - valorNum2
+            resultado.innerHTML = `a subtração entre ${valorNum1} - ${valorNum2} é igual a ${subtrair}.`
+        }
+
+        function multiplicar() {
+            let n1 = document.getElementById('txtn1')
+            let n2 = document.querySelector('input#txtn2')
+            let resultado = document.getElementById('resultado')
+
+            let valorN1 = Number(n1.value)
+            let valorN2 = Number(n2.value)
+            let multiplicar = valorN1 * valorN2
+            resultado.innerHTML = `a multiplicação entre ${valorN1} e ${valorN2} é igual a ${multiplicar}.`
+        }
+
+    </script>
+
+</body>
+</html>

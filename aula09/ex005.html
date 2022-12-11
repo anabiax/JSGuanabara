@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background: grey;
+            color: white;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+
+    <p>Trata-se de um Modelo de Objetos p/ Documentos, isto é, um conjunto de objetos dentro do navegador que dá <strong>acesso</strong> aos componentes internos do web site. </p>
+
+    <p><strong>DOM</strong> permite manipular elementos, logo se quiser se queremos fazer algo em um elemento primeiro você precisa selecioná-lo.</p>  
+
+    <div id="mensagem">clique aqui agora</div>
+    <div name="msg">mais um teste com name</div>
+    <div class="message">mais um teste com class</div>
+
+                                window 
+                                  | 
+    location (URL, p. atual etc), document (doc atual), history.         
+                                     |
+                                    HTML (parent) 
+                                     | 
+                                    head e body (child)
+                                    |       |        
+                          meta e title      |
+                                            h1, p, div
+                                                |
+                                                strong
+
+
+
+    <br>
+    <br>
+
+    <script>
+        let h1 = window.document.getElementsByTagName('h1')[0]
+        window.document.write('o título está escrito assim: ' + h1.innerText)
+        h1.style.color = 'blue';
+
+        let p1 = document.getElementsByTagName('p')[1]
+        document.write(p1.innerHTML);
+
+        // window.alert(h1.innerText);
+
+        let d = window.document.getElementById('mensagem')
+        d.style.background= 'darkOrange'
+        d.innerText = 'testando...' // modificando o texto por JS
+/* ou */   window.document.getElementById('mensagem').innerText = 'olá mundão';
+
+        let f = window.document.querySelector('div#mensagem')
+        f.style.background = 'green';
+
+        let e = window.document.getElementsByName('msg')[0].innerText = 'opa';
+
+        // esse é o método + recente
+        let g = window.document.querySelector('div.message')
+        g.style.background = 'blue'
+
+        
+
+    </script>
+
+</body>
+</html>
